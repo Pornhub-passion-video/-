@@ -27,12 +27,13 @@ int main() {
 	wall.drawWall();
 	
 	//接受用户输入
-	char key = _getch();
-	if (snake.move(key))
-	{
-		system("cls");
-		wall.drawWall();
-		Sleep(300);
+	while (true) {
+		char key = _getch();
+		if (snake.move(key))
+		{
+			system("cls");
+			wall.drawWall();
+			Sleep(300);
+		}
 	}
-	
 }
